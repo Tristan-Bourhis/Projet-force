@@ -1,5 +1,8 @@
 package io.takima.demo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity(name = "programmes")
@@ -20,12 +23,12 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProgramme;
 
-    @Column(name = "id_seance")
-    private Integer idSeance;
+    @OneToMany(mappedBy = "programme",orphanRemoval = true,cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<Seance> seances;
 
 
     public Programme() {}
-
 
 
     public Integer getIdProgramme() {
@@ -36,12 +39,12 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
         this.idProgramme = idProgramme;
     }
 
-    public Integer getIdSeance() {
-        return idSeance;
+    public List<Seance> getSeances() {
+        return seances;
     }
 
-    public void setIdSeance(Integer idSeance) {
-        this.idSeance = idSeance;
+    public void setSeances(List<Seance> seances) {
+        this.seances = seances;
     }
 
     @Override
