@@ -16,25 +16,21 @@ create table exercices
     repetition int not null,
     pourcentage_rm int not null,
     commentaire VARCHAR(255) null,
-    resultat int null
+    resultat int null,
+    id_seance int null
 );
 create table seances
 (
     id_seance int auto_increment,
     constraint seances_pk
         primary key (id_seance),
-    id_exercice int null,
-    constraint seances_fk
-        foreign key (id_exercice) references exercices(id_exercice)
+    id_programme int null
 );
 create table programmes
 (
     id_programme int auto_increment,
     constraint programmes_pk
-        primary key (id_programme),
-    id_seance int null,
-    constraint programmes_fk
-        foreign key (id_seance) references seances(id_seance)
+        primary key (id_programme)
 );
 create table users
 (

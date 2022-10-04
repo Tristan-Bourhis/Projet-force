@@ -23,6 +23,10 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @Column(name = "id_exercice")
     private Integer idExercice;
 
+    @ManyToOne
+    @JoinColumn(name="id_programme")
+    private Seance seance;
+
     public Seance() {}
 
     public Seance(Integer idSeance, Integer idExercice) {
