@@ -18,7 +18,7 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idExercice;
+    private Integer idExercice;
 
     @Column(name = "nom")
     private String nom;
@@ -40,7 +40,7 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     public Exercice() {}
 
-    public Exercice(Long idExercice, String nom, Integer serie, Integer repetition, Integer pourcentageRm, String commentaire, Integer resultat) {
+    public Exercice(Integer idExercice, String nom, Integer serie, Integer repetition, Integer pourcentageRm, String commentaire, Integer resultat) {
         this.idExercice = idExercice;
         this.nom = nom;
         this.serie = serie;
@@ -50,11 +50,11 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
         this.resultat = resultat;
     }
 
-    public Long getIdExercice() {
+    public Integer getIdExercice() {
         return idExercice;
     }
 
-    public void setIdExercice(Long idExercice) {
+    public void setIdExercice(Integer idExercice) {
         this.idExercice = idExercice;
     }
 

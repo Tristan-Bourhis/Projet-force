@@ -18,7 +18,7 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -29,14 +29,41 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @Column(name = "age")
     private Integer age;
 
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "taille")
+    private Integer taille;
+
+    @Column(name = "poids")
+    private Integer poids;
+
+    @Column(name = "avancement")
+    private Integer avancement;
+
+    @Column(name = "id_programme")
+    private Integer idProgramme;
+
     public User() {}
 
-    public void setId(Long id) {
+    public User(Integer id, String firstName, String lastName, Integer age, String email, Integer taille, Integer poids, Integer avancement, Integer idProgramme) {
         this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+        this.taille = taille;
+        this.poids = poids;
+        this.avancement = avancement;
+        this.idProgramme = idProgramme;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -61,6 +88,46 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getTaille() {
+        return taille;
+    }
+
+    public void setTaille(Integer taille) {
+        this.taille = taille;
+    }
+
+    public Integer getPoids() {
+        return poids;
+    }
+
+    public void setPoids(Integer poids) {
+        this.poids = poids;
+    }
+
+    public Integer getAvancement() {
+        return avancement;
+    }
+
+    public void setAvancement(Integer avancement) {
+        this.avancement = avancement;
+    }
+
+    public Integer getIdProgramme() {
+        return idProgramme;
+    }
+
+    public void setIdProgramme(Integer idProgramme) {
+        this.idProgramme = idProgramme;
     }
 
     @Override

@@ -2,7 +2,7 @@ package io.takima.demo;
 import javax.persistence.*;
 import java.util.Objects;
 
-@Entity(name = "seance")
+@Entity(name = "seances")
 public class Seance {
 /*
 Toutes les classes marquées de "@Entity" correspondent à une table en BDD, la table "users" ici.
@@ -18,31 +18,31 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idSeance;
+    private Integer idSeance;
 
     @Column(name = "id_exercice")
-    private String idExercice;
+    private Integer idExercice;
 
     public Seance() {}
 
-    public Seance(Long idSeance, String idExercice) {
+    public Seance(Integer idSeance, Integer idExercice) {
         this.idSeance = idSeance;
         this.idExercice = idExercice;
     }
 
-    public Long getIdSeance() {
+    public Integer getIdSeance() {
         return idSeance;
     }
 
-    public void setIdSeance(Long idSeance) {
+    public void setIdSeance(Integer idSeance) {
         this.idSeance = idSeance;
     }
 
-    public String getIdExercice() {
+    public Integer getIdExercice() {
         return idExercice;
     }
 
-    public void setIdExercice(String idExercice) {
+    public void setIdExercice(Integer idExercice) {
         this.idExercice = idExercice;
     }
 

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/seances")
 @CrossOrigin
 public class SeanceController {
 
