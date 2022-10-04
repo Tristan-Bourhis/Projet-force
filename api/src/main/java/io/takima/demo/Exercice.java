@@ -38,6 +38,10 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @Column(name = "resultat")
     private Integer resultat;
 
+    @ManyToOne
+    @JoinColumn(name="id_seance")
+    private Seance seance;
+
     public Exercice() {}
 
     public Exercice(Integer idExercice, String nom, Integer serie, Integer repetition, Integer pourcentageRm, String commentaire, Integer resultat) {
@@ -52,6 +56,14 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     public Integer getIdExercice() {
         return idExercice;
+    }
+
+    public Seance getSeance() {
+        return seance;
+    }
+
+    public void setSeance(Seance seance) {
+        this.seance = seance;
     }
 
     public void setIdExercice(Integer idExercice) {

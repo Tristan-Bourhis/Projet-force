@@ -1,5 +1,8 @@
 package io.takima.demo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity(name = "seances")
@@ -20,18 +23,20 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idSeance;
 
-    @Column(name = "id_exercice")
-    private Integer idExercice;
+    @OneToMany(mappedBy = "seance",orphanRemoval = true,cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<Exercice> exercices;
 
     @ManyToOne
     @JoinColumn(name="id_programme")
-    private Seance seance;
+    private Programme programme;
 
     public Seance() {}
 
-    public Seance(Integer idSeance, Integer idExercice) {
+    public Seance(Integer idSeance, List<Exercice> idExercice, Programme programme) {
         this.idSeance = idSeance;
-        this.idExercice = idExercice;
+        this.exercices = idExercice;
+        this.programme = programme;
     }
 
     public Integer getIdSeance() {
@@ -42,12 +47,28 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
         this.idSeance = idSeance;
     }
 
-    public Integer getIdExercice() {
-        return idExercice;
+    public List<Exercice> getExercices() {
+        return exercices;
     }
 
-    public void setIdExercice(Integer idExercice) {
-        this.idExercice = idExercice;
+    public void setExercices(List<Exercice> exercices) {
+        this.exercices = exercices;
+    }
+
+    public Programme getProgramme() {
+        return programme;
+    }
+
+    public void setProgramme(Programme programme) {
+        this.programme = programme;
+    }
+
+    public Programme getSeance() {
+        return programme;
+    }
+
+    public void setSeance(Programme programme) {
+        this.programme = programme;
     }
 
     @Override
