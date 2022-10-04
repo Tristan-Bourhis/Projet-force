@@ -1,15 +1,17 @@
+drop table users;
+
+drop table programmes;
+
+drop table seances;
+
+drop table exercices;
+
 create table exercices
 (
     id_exercice bigint auto_increment,
     constraint exercices_pk
         primary key (id_exercice),
-    nom TEXT not null
-);
-create table exercices_seance
-(
-    id_exercice_seance bigint auto_increment,
-    constraint exercices_seance_pk
-        primary key (id_exercice_seance),
+    nom TEXT not null,
     serie int not null,
     repetition int not null,
     pourcentage_rm int not null,
@@ -21,9 +23,9 @@ create table seances
     id_seance bigint auto_increment,
     constraint seances_pk
         primary key (id_seance),
-    id_exercice_seance bigint null,
+    id_exercice bigint null,
     constraint seances_fk
-        foreign key (id_exercice_seance) references exercices_seance(id_exercice_seance)
+        foreign key (id_exercice) references exercices(id_exercice)
 );
 create table programmes
 (
