@@ -8,12 +8,12 @@
   <!--Top Navigation bar-->
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="topNavBarUpper">
-      <button type="button" class="btn btn btn-outline-light" [routerLink]="['/home']">HOME</button>
-      <button type="button" class="btn btn btn-outline-light">Calcul total et DOTS</button>
-      <button type="button" class="btn btn btn-outline-light">Calcul E1RM</button>
-      <button type="button" class="btn btn btn-outline-light">Calcul RPE</button>
-      <button type="button" class="btn btn btn-outline-light">Recommandations échauffement</button>
-      <button type="button" class="btn btn btn-outline-light" [routerLink]="['/login']" >Login</button>
+      <button class="btnNavBar" [routerLink]="['/home']">HOME</button>
+      <button class="btnNavBar" [routerLink]="['/dots']">Calcul total et DOTS</button>
+      <button class="btnNavBar" [routerLink]="['/max']">Calcul E1RM</button>
+      <button class="btnNavBar" [routerLink]="['/rpe']">Calcul RPE</button>
+      <button class="btnNavBar" [routerLink]="['/warmup']">Recommandations échauffement</button>
+      <button class="btnNavBar" [routerLink]="['/login']" >Login</button>
 
     </div>
   </div>
@@ -24,10 +24,10 @@
       </button>
     </div>
   </nav>
+
   <!--End top Navigation bar -->
-
-
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+    <div class="push"></div>
 
 
   <!-- Footer -->
