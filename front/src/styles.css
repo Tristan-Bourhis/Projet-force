@@ -45,21 +45,11 @@ body, html {
     font-family: "Copperplate Gothic Bold", fantasy;
     padding: 16px 32px;
 }
-/*.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    height: 100%;
-    width: available;
-}*/
 
 .image{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .middle {
@@ -86,7 +76,8 @@ body, html {
     height: 100%;
     width: 100%;
     object-fit: contain;
-    margin-bottom: 24px;
+    margin-top: 24px;
 }
 /*End style of graph evolution */
+
 
