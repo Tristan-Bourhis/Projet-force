@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListUsersComponent } from './pages/list-users/list-users.component';
-import { AddUserComponent } from './pages/add-user/add-user.component';
+import { ListUsersComponent } from './list-users/list-users.component';
+import { AddUserComponent } from './add-user/add-user.component';
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';

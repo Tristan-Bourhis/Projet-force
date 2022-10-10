@@ -22,11 +22,14 @@ export class AddUserComponent implements OnInit {
       id: null,
       firstName: ngForm.form.value.firstName,
       lastName: ngForm.form.value.lastName,
+      email: ngForm.form.value.email,
       age: ngForm.form.value.age,
+      taille: ngForm.form.value.taille,
+      poids: ngForm.form.value.poids,
     });
 
     this.userService.addUser(user).subscribe(user => console.log(user));
 
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/list-users');
   }
 }
