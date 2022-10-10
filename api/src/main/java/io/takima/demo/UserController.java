@@ -35,8 +35,8 @@ public class UserController {
         this.userDAO.deleteById(id);
     }
 
-    @GetMapping
+    /*@GetMapping
     public void getUserId(@PathVariable String mail) {
         this.userDAO.findByEmail(mail);
-    }
+    }*/
 }

@@ -23,7 +23,7 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProgramme;
 
-    @Column(name = "nom")
+    @Column(name = "nom_programme")
     private String nom;
     @OneToMany(mappedBy = "programme",orphanRemoval = true,cascade = CascadeType.REMOVE)
     @JsonIgnore
