@@ -25,6 +25,14 @@ public class ProgrammeController {
         return programmes;
     }
 
+    public List<Seance> getseances() {
+        Iterable<Seance> it = this.programmeDAO.findAllSeance();
+        List<Seance> seances = new ArrayList<>();
+        it.forEach(e -> seances.add(e));
+
+        return seances;
+    }
+
     @PostMapping()
     public Programme addProgramme(@RequestBody Programme programme) {
         return this.programmeDAO.save(programme);
