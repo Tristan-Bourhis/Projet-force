@@ -10,6 +10,10 @@ import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import {RouterModule} from '@angular/router';
+import { MaxComponent } from './max/max.component';
+import { DotsComponent } from './dots/dots.component';
+import { RpeComponent } from './rpe/rpe.component';
+import { WarmupComponent } from './warmup/warmup.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import {RouterModule} from '@angular/router';
     ListUsersComponent,
     AddUserComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MaxComponent,
+    DotsComponent,
+    RpeComponent,
+    WarmupComponent
   ],
   imports: [
     BrowserModule,
