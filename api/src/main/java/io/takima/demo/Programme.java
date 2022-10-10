@@ -23,6 +23,8 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProgramme;
 
+    @Column(name = "nom")
+    private String nom;
     @OneToMany(mappedBy = "programme",orphanRemoval = true,cascade = CascadeType.REMOVE)
     @JsonIgnore
     private List<Seance> seances;
@@ -30,6 +32,13 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     public Programme() {}
 
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
     public Integer getIdProgramme() {
         return idProgramme;
@@ -45,6 +54,15 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     public void setSeances(List<Seance> seances) {
         this.seances = seances;
+    }
+
+    @Override
+    public String toString() {
+        return "Programme{" +
+                "idProgramme=" + idProgramme +
+                ", nom='" + nom + '\'' +
+                ", seances=" + seances +
+                '}';
     }
 
     @Override

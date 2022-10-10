@@ -30,7 +30,8 @@ create table programmes
 (
     id_programme int auto_increment,
     constraint programmes_pk
-        primary key (id_programme)
+        primary key (id_programme),
+    nom_programme VARCHAR(255) null
 );
 create table users
 (
