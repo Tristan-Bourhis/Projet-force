@@ -1,0 +1,83 @@
+/* Style top Navigation bar*/
+.topNavBarUpper{
+    background: rgb(36,15,0);
+    background: linear-gradient(270deg, rgba(36,15,0,1) 0%, rgba(121,9,19,1) 49%, rgba(255,0,0,1) 100%);
+}
+.topNavBarBottom{
+    background: rgb(36,15,0);
+    background: linear-gradient(270deg, rgba(36,15,0,1) 0%, rgba(121,9,19,1) 49%, rgba(255,0,0,1) 100%);
+    border-bottom-style: solid;
+}
+
+.logo-image{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+/* End style top Navigation bar*/
+
+/* Style three sections */
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+
+.pane {
+    width: 33%;
+    height: 100%;
+    float: left;
+    border-collapse: collapse;
+    margin: 1px;
+}
+
+.text {
+    color: black;
+    font-size: 33px;
+    font-family: "Copperplate Gothic Bold", fantasy;
+    padding: 16px 32px;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%,-350%);
+}
+
+.pane:hover .image {
+    opacity: 0.3;
+    transform: scale(1.05);
+}
+
+.pane:hover .middle {
+    opacity: 1;
+}
+/*End style three sections */
+
+
+/*Style graph evolution */
+.graphEvo{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 24px;
+}
+/*End style of graph evolution */
+
+
