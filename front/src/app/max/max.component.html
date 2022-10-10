@@ -1,0 +1,14 @@
+<p class="toolTitle">One rep max calculator</p>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <label>Load</label>
+    <input type="number" name="weightRm" min="1" class="form-control" id="weightRm" placeholder="Enter your weight in kg" ngModel>
+    <small id="estimatedRmHelp" class="form-text text-muted">This will be the weight to calculate your estimated one rep max</small>
+
+    <label>Reps</label>
+    <input type="number" max="12" min="1"  class="form-control" name="repsRm" id="repsRm" placeholder="Enter between 1 and 12 reps" ngModel>
+
+    <button type="submit" class="btn danger">Calculate your estimated one rep max</button>
+</form>
+
+<br>
+<input class="inputResult" id="resultE1RM" type="text" value="{{weightRM}}"readonly>
