@@ -21,7 +21,7 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idProgramme;
+    private Long idProgramme;
 
     @Column(name = "nom_programme")
     private String nom;
@@ -40,11 +40,11 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
         this.nom = nom;
     }
 
-    public Integer getIdProgramme() {
+    public Long getIdProgramme() {
         return idProgramme;
     }
 
-    public void setIdProgramme(Integer idProgramme) {
+    public void setIdProgramme(Long idProgramme) {
         this.idProgramme = idProgramme;
     }
 

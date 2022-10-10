@@ -21,7 +21,7 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idSeance;
+    private Long idSeance;
 
     @OneToMany(mappedBy = "seance",orphanRemoval = true,cascade = CascadeType.REMOVE)
     @JsonIgnore
@@ -33,17 +33,17 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     public Seance() {}
 
-    public Seance(Integer idSeance, List<Exercice> idExercice, Programme programme) {
+    public Seance(Long idSeance, List<Exercice> idExercice, Programme programme) {
         this.idSeance = idSeance;
         this.exercices = idExercice;
         this.programme = programme;
     }
 
-    public Integer getIdSeance() {
+    public Long getIdSeance() {
         return idSeance;
     }
 
-    public void setIdSeance(Integer idSeance) {
+    public void setIdSeance(Long idSeance) {
         this.idSeance = idSeance;
     }
 

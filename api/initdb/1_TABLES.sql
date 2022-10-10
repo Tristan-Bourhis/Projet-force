@@ -8,7 +8,7 @@ drop table exercices;
 
 create table exercices
 (
-    id_exercice int auto_increment,
+    id_exercice bigint auto_increment,
     constraint exercices_pk
         primary key (id_exercice),
     nom VARCHAR(255) not null,
@@ -17,25 +17,25 @@ create table exercices
     pourcentage_rm int not null,
     commentaire VARCHAR(255) null,
     resultat int null,
-    id_seance int null
+    id_seance bigint null
 );
 create table seances
 (
-    id_seance int auto_increment,
+    id_seance bigint auto_increment,
     constraint seances_pk
         primary key (id_seance),
-    id_programme int null
+    id_programme bigint null
 );
 create table programmes
 (
-    id_programme int auto_increment,
+    id_programme bigint auto_increment,
     constraint programmes_pk
         primary key (id_programme),
     nom_programme VARCHAR(255) null
 );
 create table users
 (
-    id int auto_increment,
+    id bigint auto_increment,
     constraint users_pk
         primary key (id),
     first_name VARCHAR(255) not null,
@@ -45,7 +45,7 @@ create table users
     taille int null,
     poids int null,
     avancement int null,
-    id_programme int null,
+    id_programme bigint null,
     constraint users_fk
         foreign key (id_programme) references programmes(id_programme)
 );
