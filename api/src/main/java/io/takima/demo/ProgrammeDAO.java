@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProgrammeDAO extends CrudRepository<Programme, Long> {
 
-    @Query()
-    Iterable<Seance> findAllSeance();
+
+
 }
