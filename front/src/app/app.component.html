@@ -1,9 +1,44 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <img class="logo" src="/assets/logo-epf.svg"/>
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" [routerLink]="['/']">User List</a>
   <a class="navbar-brand" [routerLink]="['/add-user']">Add User</a>
-</nav>
+  <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+  <a class="navbar-brand" [routerLink]="['/login']">Login</a>
+</nav>-->
 
-<router-outlet></router-outlet>
+  <!--Top Navigation bar-->
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="topNavBarUpper">
+      <button type="button" class="btn btn btn-outline-light" [routerLink]="['/home']">HOME</button>
+      <button type="button" class="btn btn btn-outline-light">Calcul total et DOTS</button>
+      <button type="button" class="btn btn btn-outline-light">Calcul E1RM</button>
+      <button type="button" class="btn btn btn-outline-light">Calcul RPE</button>
+      <button type="button" class="btn btn btn-outline-light">Recommandations échauffement</button>
+      <button type="button" class="btn btn btn-outline-light" [routerLink]="['/login']" >Login</button>
+
+    </div>
+  </div>
+  <nav class="navbar topNavBarBottom">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <!--End top Navigation bar -->
+
+
+  <router-outlet></router-outlet>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <div class="text-center p-3">
+      © 2022 Copyright:
+      <p>OPAT.com</p>
+    </div>
+  </footer>
+
+
+
 
 
