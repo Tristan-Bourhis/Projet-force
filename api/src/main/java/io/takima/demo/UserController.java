@@ -39,4 +39,10 @@ public class UserController {
     public void getUserId(@PathVariable String mail) {
         this.userDAO.findByEmail(mail);
     }
+
+    @GetMapping("userByEmail/{email}")
+    public User getUserByEmail(@PathVariable String email) {
+        return this.userDAO.findByEmail(email).get();
+    }
+
 }
