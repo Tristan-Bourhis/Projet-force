@@ -8,6 +8,7 @@ import {MaxComponent} from './max/max.component';
 import {DotsComponent} from './dots/dots.component';
 import {RpeComponent} from './rpe/rpe.component';
 import {WarmupComponent} from './warmup/warmup.component';
+import {OutilsComponent} from './outils/outils.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'dots', component: DotsComponent },
   { path: 'rpe', component: RpeComponent },
   { path: 'warmup', component: WarmupComponent },
+  { path: 'outils', component: OutilsComponent },
   { path: 'login', component: LoginComponent}];
 
 @NgModule({
