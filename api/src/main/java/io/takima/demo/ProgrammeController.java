@@ -17,11 +17,10 @@ public class ProgrammeController {
     }
 
     @GetMapping()
-    public List<Programme> getprogrammes() {
+    public List<Programme> getProgrammes() {
         Iterable<Programme> it = this.programmeDAO.findAll();
         List<Programme> programmes = new ArrayList<>();
         it.forEach(e -> programmes.add(e));
-
         return programmes;
     }
 
