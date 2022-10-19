@@ -11,6 +11,7 @@ import { defaultsDeep } from 'lodash';
 })
 export class UserService {
 
+  user: User;
   private url: string;
 
   constructor(private http: HttpClient) {
@@ -27,6 +28,10 @@ export class UserService {
 
   deleteUser(id: number): Observable<any> {
     return this.http.delete(`${this.url}/users/${id}`).pipe(timeout(10000));
+  }
+
+  getUserByEmail(email:string):Observable<User> {
+    return this.http.get<User>(`${this.url}/users/userByEmail/${email}`).pipe(timeout(10000));
   }
 
 }
