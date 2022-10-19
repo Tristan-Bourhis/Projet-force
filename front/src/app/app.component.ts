@@ -18,4 +18,12 @@ export class AppComponent {
       return true;
     }
   }
+
+  isAdmin(){
+    if(this.userService.getUserConnected()!=null && this.userService.getUserConnected().email === 'paul@gmail.com'){
+        return false;
+    }else{
+      return true;
+    }
+  }
 }
