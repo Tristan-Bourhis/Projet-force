@@ -18,6 +18,10 @@ export class UserService {
     this.url = environment.url;
   }
 
+  getUserConnected(): User{
+    return this.user;
+  }
+
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.url}/users`).pipe(timeout(10000));
   }

@@ -8,13 +8,13 @@
   <!--Top Navigation bar-->
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="topNavBarUpper">
-      <button class="btnNavBar" [routerLink]="['/home']">HOME</button>
-      <button class="btnNavBar" [routerLink]="['/dots']">Calcul total et DOTS</button>
-      <button class="btnNavBar" [routerLink]="['/max']">Calcul E1RM</button>
-      <button class="btnNavBar" [routerLink]="['/rpe']">Calcul RPE</button>
-      <button class="btnNavBar" [routerLink]="['/warmup']">Recommandations échauffement</button>
-      <button class="btnNavBar" [routerLink]="['/login']" >Login</button>
-      <button class="btnNavBar" [routerLink]="['/list-users']" >Liste utilisateurs</button>
+      <button a *ngIf="loggedIn()" class="btnNavBar" [routerLink]="['/login']" >Login</button>
+      <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/home']">HOME</button>
+      <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/dots']">Calcul total et DOTS</button>
+      <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/max']">Calcul E1RM</button>
+      <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/rpe']">Calcul RPE</button>
+      <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/warmup']">Recommandations échauffement</button>
+      <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/list-users']" >Liste utilisateurs</button>
     </div>
   </div>
   <nav class="navbar topNavBarBottom">

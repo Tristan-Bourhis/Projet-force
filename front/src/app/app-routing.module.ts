@@ -11,15 +11,15 @@ import {WarmupComponent} from './warmup/warmup.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent},
   { path: 'home', component: HomeComponent },
   { path: 'list-users', component: ListUsersComponent },
   { path: 'add-user', component: AddUserComponent },
   { path: 'max', component: MaxComponent },
   { path: 'dots', component: DotsComponent },
   { path: 'rpe', component: RpeComponent },
-  { path: 'warmup', component: WarmupComponent },
-  { path: 'login', component: LoginComponent}];
+  { path: 'warmup', component: WarmupComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
