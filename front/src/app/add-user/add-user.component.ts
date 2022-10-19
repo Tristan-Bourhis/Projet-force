@@ -28,6 +28,7 @@ export class AddUserComponent implements OnInit {
       poids: ngForm.form.value.poids,
     });
 
+    // tslint:disable-next-line:no-shadowed-variable
     this.userService.addUser(user).subscribe(user => console.log(user));
 
     this.router.navigateByUrl('/list-users');
