@@ -1,1 +1,85 @@
-<p>dots works!</p>
+<!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" ></div>
+    <!-- Background image -->
+
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: -100px;
+        background: hsla(0, 0%, 100%, 0.8);
+        backdrop-filter: blur(30px);
+        ">
+        <div class="card-body py-5 px-md-5">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Calcul du total et score DOTS</h2>
+                    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                        <!-- Gender selection -->
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleRadio" value=1 ngModel>
+                            <label class="form-check-label" for="maleRadio">Homme</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleRadio" value=2 ngModel >
+                            <label class="form-check-label" for="femaleRadio">Femme</label>
+                        </div>
+                        <!-- Squat input -->
+                        <div class="form-outline mb-4">
+                            <input type="number" name="squatRM" id="squatRM" class="form-control" ngModel />
+                            <label class="form-label" for="squatRM">Max au squat</label>
+                        </div>
+                        <!-- Bench input -->
+                        <div class="form-outline mb-4">
+                            <input type="number" name="benchRM" id="benchRM" class="form-control" ngModel />
+                            <label class="form-label" for="benchRM">Max au bench</label>
+                        </div>
+                        <!-- Deadlift input -->
+                        <div class="form-outline mb-4">
+                            <input type="number" name="deadliftRM" id="deadliftRM" class="form-control" ngModel />
+                            <label class="form-label" for="deadliftRM">Max au deadlift</label>
+                        </div>
+                        <!-- Bodyweight input -->
+                        <div class="form-outline mb-4">
+                            <input type="number" name="mass" id="mass" class="form-control" ngModel />
+                            <label class="form-label" for="mass">Poids</label>
+                        </div>
+                        <!-- Category selection -->
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="SubRadio" value=13 ngModel>
+                            <label class="form-check-label" for="SubRadio">Sub-Juniors</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="JuniorsRadio" value=19 ngModel >
+                            <label class="form-check-label" for="JuniorsRadio">Juniors</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="OpenRadio" value=24 ngModel>
+                            <label class="form-check-label" for="OpenRadio">Open/Senior</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="MastersRadio" value=40 ngModel >
+                            <label class="form-check-label" for="MastersRadio">Masters</label>
+                        </div>
+
+                        <br>
+                        <br>
+                        <br>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">
+                            Calcul total et dots
+                        </button>
+                        <button class="btn btn-primary btn-block mb-4 btn-result" id="resultTotal" style="display: none;">{{resultTOTAL}}</button>
+                        <button class="btn btn-primary btn-block mb-4 btn-result" id="resultDot" style="display: none;">{{resultDOT}}</button>
+                        <img id="subjuniorDots" src="assets/subjuniorDots.JPG" alt="Avatar" class="image" style="display: none;">
+                        <img id="juniorDots" src="assets/juniorDots.JPG" alt="Avatar" class="image" style="display: none;">
+                        <img id="seniorDots" src="assets/seniorDots.JPG" alt="Avatar" class="image" style="display: none;">
+                        <img id="masterDot" src="assets/masterDot.JPG" alt="Avatar" class="image" style="display: none;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->

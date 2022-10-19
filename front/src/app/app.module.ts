@@ -25,7 +25,7 @@ import { WarmupComponent } from './warmup/warmup.component';
     MaxComponent,
     DotsComponent,
     RpeComponent,
-    WarmupComponent
+    WarmupComponent,
   ],
   imports: [
     BrowserModule,
