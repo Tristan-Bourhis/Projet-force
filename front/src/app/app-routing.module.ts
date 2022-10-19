@@ -9,6 +9,7 @@ import {MaxComponent} from './max/max.component';
 import {DotsComponent} from './dots/dots.component';
 import {RpeComponent} from './rpe/rpe.component';
 import {WarmupComponent} from './warmup/warmup.component';
+import {OutilsComponent} from './outils/outils.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'max', component: MaxComponent },
   { path: 'dots', component: DotsComponent },
   { path: 'rpe', component: RpeComponent },
-  { path: 'warmup', component: WarmupComponent }];
+  { path: 'warmup', component: WarmupComponent },
+  { path: 'outils', component: OutilsComponent };
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
