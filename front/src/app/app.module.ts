@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListUsersComponent } from './list-users/list-users.component';
+import { ListProgrammesComponent } from './list-programmes/list-programmes.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
@@ -25,7 +26,8 @@ import { WarmupComponent } from './warmup/warmup.component';
     MaxComponent,
     DotsComponent,
     RpeComponent,
-    WarmupComponent
+    WarmupComponent,
+    ListProgrammesComponent
   ],
   imports: [
     BrowserModule,

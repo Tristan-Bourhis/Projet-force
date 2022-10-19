@@ -4,6 +4,7 @@ import {ListUsersComponent} from './list-users/list-users.component';
 import {AddUserComponent} from './add-user/add-user.component';
 import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
+import {ListProgrammesComponent} from './list-programmes/list-programmes.component';
 import {MaxComponent} from './max/max.component';
 import {DotsComponent} from './dots/dots.component';
 import {RpeComponent} from './rpe/rpe.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'list-users', component: ListUsersComponent },
+  { path: 'list-programs', component: ListProgrammesComponent },
   { path: 'add-user', component: AddUserComponent },
   { path: 'max', component: MaxComponent },
   { path: 'dots', component: DotsComponent },
