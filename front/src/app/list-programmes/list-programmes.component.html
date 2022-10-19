@@ -1,4 +1,9 @@
 <div class="container">
+    <script>
+        function seanceAssociation(idProgramme, seances) {
+
+        }
+    </script>
     <div>
         <button type="button" [routerLink]="['/add-user']" >Ajouter un Programme</button>
     </div>
@@ -28,15 +33,19 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let seance of seances">
+        <ng-container *ngFor="let seance of seances">
+        <tr *ngIf="seance.programme.idProgramme==1">
             <td>{{seance.idSeance}}</td>
             <td>{{seance.programme.nom}}</td>
-            <td><button type="button" class="btn btn-danger deleteButton" (click)="deleteSeance(seance.idSeance)">Delete</button></td>
+            <td>
+                <button type="button" class="btn btn-danger deleteButton" (click)="deleteSeance(seance.idSeance)">
+                    Delete
+                </button>
+            </td>
         </tr>
+        </ng-container>
         </tbody>
-    </table>
 
-    <table class="table table-striped table-bordered table-hover">
         <thead class="thead">
         <tr>
             <th scope="col">#Exercies</th>
@@ -56,7 +65,11 @@
             <td>{{exercice.repetition}}</td>
             <td>{{exercice.seance.idSeance}}</td>
             <td>{{exercice.seance.programme.nom}}</td>
-            <td><button type="button" class="btn btn-danger deleteButton" (click)="deleteExercice(exercice.idExercice)">Delete</button></td>
+            <td>
+                <button type="button" class="btn btn-danger deleteButton" (click)="deleteExercice(exercice.idExercice)">
+                    Delete
+                </button>
+            </td>
         </tr>
         </tbody>
     </table>

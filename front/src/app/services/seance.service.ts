@@ -1,10 +1,12 @@
-import { Injectable } from '@angular/core';
+import {Injectable, Optional} from '@angular/core';
 import {Seance} from '../models/seance.model';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {timeout} from 'rxjs/operators';
 import { defaultsDeep } from 'lodash';
+import {User} from '../models/user.model';
+import {Programme} from '../models/programme.model';
 
 @Injectable({
     providedIn: 'root'

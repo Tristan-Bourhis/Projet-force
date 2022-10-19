@@ -15,7 +15,8 @@ export class ListProgrammesComponent implements OnInit {
 
     programmes: Programme[];
     seances: Seance[];
-    exercices: Exercice[]
+    exercices: Exercice[];
+    seances2: Seance[];
 
     constructor(private programmeService: ProgrammeService, private seanceService: SeanceService, private eService: ExerciceService) { }
 
