@@ -29,8 +29,20 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @JsonIgnore
     private List<Seance> seances;
 
+    @OneToMany(mappedBy = "programme",orphanRemoval = true,cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<User> users;
+
 
     public Programme() {}
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
 
     public String getNom() {
         return nom;

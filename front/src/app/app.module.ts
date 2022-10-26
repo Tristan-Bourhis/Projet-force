@@ -17,6 +17,7 @@ import { RpeComponent } from './rpe/rpe.component';
 import { WarmupComponent } from './warmup/warmup.component';
 import { OutilsComponent } from './outils/outils.component';
 import {CreateAccountComponent} from "./create-account/create-account.component";
+import {UpdateUserComponent} from './update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {CreateAccountComponent} from "./create-account/create-account.component"
     WarmupComponent,
     OutilsComponent,
     ListProgrammesComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

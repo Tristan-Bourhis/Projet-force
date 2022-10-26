@@ -45,7 +45,5 @@ create table users
     taille int null,
     poids int null,
     avancement int null,
-    id_programme bigint null,
-    constraint users_fk
-        foreign key (id_programme) references programmes(id_programme)
+    id_programme bigint null
 );
