@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'rpe', component: RpeComponent },
   { path: 'warmup', component: WarmupComponent },
   { path: 'outils', component: OutilsComponent },
-  { path: 'create-account', component: CreateAccountComponent }
+  { path: 'create-account', component: CreateAccountComponent },
   { path: 'update-user', component: UpdateUserComponent }
 ]
 
