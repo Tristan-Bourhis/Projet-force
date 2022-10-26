@@ -5,6 +5,8 @@ import {SeanceService} from '../services/seance.service';
 import {Seance} from '../models/seance.model';
 import {Exercice} from '../models/exercice.model';
 import {ExerciceService} from '../services/exercice.service';
+import {User} from '../models/user.model';
+import {UserService} from '../services/user.service';
 
 @Component({
     selector: 'app-list-programs',
@@ -16,31 +18,14 @@ export class ListProgrammesComponent implements OnInit {
     programmes: Programme[];
     seances: Seance[];
     exercices: Exercice[];
-    seances2: Seance[];
+    connectedUser: User;
 
-    constructor(private programmeService: ProgrammeService, private seanceService: SeanceService, private eService: ExerciceService) { }
+    constructor(private pSer: ProgrammeService, private sSer: SeanceService, private uSer: UserService, private eSer: ExerciceService) { }
 
     ngOnInit() {
-        this.programmeService.getProgrammes().subscribe(programmes => this.programmes = programmes);
-        this.seanceService.getSeances().subscribe(seances => this.seances=seances);
-        this.eService.getExercices().subscribe(exercices => this.exercices=exercices);
-    }
-
-    deleteProgram(id: number) {
-        this.programmeService.deleteProgramme(id).subscribe(succes => {
-            this.programmes = this.programmes.filter(programme => programme.idProgramme !== id)
-        });
-    }
-
-    deleteSeance(id: number) {
-        this.seanceService.deleteSeance(id).subscribe(succes => {
-            this.seances = this.seances.filter(seance => seance.idSeance !== id)
-        });
-    }
-
-    deleteExercice(id: number) {
-        this.eService.deleteExercice(id).subscribe(succes => {
-            this.exercices = this.exercices.filter(exercice => exercice.idExercice !== id)
-        });
+        this.pSer.getProgrammes().subscribe(programmes => this.programmes = programmes);
+        this.sSer.getSeances().subscribe(seances => this.seances=seances);
+        this.eSer.getExercices().subscribe(exercices => this.exercices=exercices);
+        this.connectedUser = this.uSer.getUserConnected();
     }
 }

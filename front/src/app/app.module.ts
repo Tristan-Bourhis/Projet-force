@@ -16,6 +16,7 @@ import { DotsComponent } from './dots/dots.component';
 import { RpeComponent } from './rpe/rpe.component';
 import { WarmupComponent } from './warmup/warmup.component';
 import { OutilsComponent } from './outils/outils.component';
+import {UpdateUserComponent} from './update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { OutilsComponent } from './outils/outils.component';
     RpeComponent,
     WarmupComponent,
     OutilsComponent,
-    ListProgrammesComponent
+    ListProgrammesComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

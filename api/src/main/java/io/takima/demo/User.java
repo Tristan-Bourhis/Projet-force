@@ -41,12 +41,13 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
     @Column(name = "avancement")
     private Integer avancement;
 
-    @Column(name = "id_programme")
-    private Long idProgramme;
+    @ManyToOne
+    @JoinColumn(name = "id_programme")
+    private Programme programme;
 
     public User() {}
 
-    public User(Long id, String firstName, String lastName, Integer age, String email, Integer taille, Integer poids, Integer avancement, Long idProgramme) {
+    public User(Long id, String firstName, String lastName, Integer age, String email, Integer taille, Integer poids, Integer avancement, Programme programme) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -55,7 +56,7 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
         this.taille = taille;
         this.poids = poids;
         this.avancement = avancement;
-        this.idProgramme = idProgramme;
+        this.programme = programme;
     }
 
     public Long getId() {
@@ -122,12 +123,12 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
         this.avancement = avancement;
     }
 
-    public Long getIdProgramme() {
-        return idProgramme;
+    public Programme getProgramme() {
+        return this.programme;
     }
 
-    public void setIdProgramme(Long idProgramme) {
-        this.idProgramme = idProgramme;
+    public void setIdProgramme(Programme programme) {
+        this.programme = programme;
     }
 
     @Override

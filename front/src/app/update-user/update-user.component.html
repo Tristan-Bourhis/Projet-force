@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1>test</h1>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="firstName">
+            First Name
+          </label>
+          <input type="text" id="firstName" class="form-control" name="firstName" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="lastName">
+            Last Name
+          </label>
+          <input type="text" id="lastName" class="form-control" name="lastName" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="email">
+            Email
+          </label>
+          <input type="text" id="email" class="form-control" name="email" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="age">
+            Age
+          </label>
+          <input type="number" id="age" class="form-control" name="age" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="taille">
+            Taille en cm
+          </label>
+          <input type="number" id="taille" class="form-control" name="taille" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="poids">
+            Poids en kg
+          </label>
+          <input type="number" id="poids" class="form-control" name="poids" ngModel>
+        </div>
+        <button class="btn btn-primary" type="submit">Ajouter</button>
+      </form>
+    </div>
+  </div>
+</div>
