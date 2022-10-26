@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: 'dots', component: DotsComponent },
   { path: 'rpe', component: RpeComponent },
   { path: 'warmup', component: WarmupComponent },
-  { path: 'outils', component: OutilsComponent }
+  { path: 'outils', component: OutilsComponent },
+  { path: 'login', component: LoginComponent}
 ]
 
 @NgModule({

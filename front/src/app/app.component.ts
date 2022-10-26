@@ -19,6 +19,11 @@ export class AppComponent {
     }
   }
 
+  logout(){
+    this.userService.logout();
+    return true;
+  }
+
   isAdmin(){
     if(this.userService.getUserConnected()!=null && this.userService.getUserConnected().email === 'paul@gmail.com'){
         return false;

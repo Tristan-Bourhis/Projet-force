@@ -22,6 +22,10 @@ export class UserService {
     return this.user;
   }
 
+  logout():void{
+    this.user=null;
+  }
+
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.url}/users`).pipe(timeout(10000));
   }

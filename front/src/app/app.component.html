@@ -1,14 +1,8 @@
-<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" [routerLink]="['/']">User List</a>
-  <a class="navbar-brand" [routerLink]="['/add-user']">Add User</a>
-  <a class="navbar-brand" [routerLink]="['/home']">Home</a>
-  <a class="navbar-brand" [routerLink]="['/login']">Login</a>
-</nav>-->
+
 
   <!--Top Navigation bar-->
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="topNavBarUpper">
-      <button a *ngIf="loggedIn()" class="btnNavBar" [routerLink]="['/login']" >Login</button>
       <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/home']">HOME</button>
       <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/dots']">Calcul total et DOTS</button>
       <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/max']">Calcul E1RM</button>
@@ -16,11 +10,12 @@
       <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/warmup']">Recommandations échauffement</button>
       <button a *ngIf="!isAdmin()" class="btnNavBar" [routerLink]="['/list-users']" >Liste utilisateurs</button>
       <button a *ngIf="!isAdmin()" class="btnNavBar" [routerLink]="['/list-programs']" >Liste programmes</button>
+      <button a *ngIf="!loggedIn()" (click)="logout()" class="btnNavBar" [routerLink]="['/login']" >Logout</button>
     </div>
   </div>
   <nav class="navbar topNavBarBottom">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button *ngIf="!loggedIn()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
