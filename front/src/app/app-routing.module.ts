@@ -10,6 +10,7 @@ import {DotsComponent} from './dots/dots.component';
 import {RpeComponent} from './rpe/rpe.component';
 import {WarmupComponent} from './warmup/warmup.component';
 import {OutilsComponent} from './outils/outils.component';
+import {CreateAccountComponent} from './create-account/create-account.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'rpe', component: RpeComponent },
   { path: 'warmup', component: WarmupComponent },
   { path: 'outils', component: OutilsComponent },
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: 'create-account', component: CreateAccountComponent }
 ]
 
 @NgModule({
