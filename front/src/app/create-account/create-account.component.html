@@ -1,3 +1,70 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 bg-image" ></div>
+  <!-- Background image -->
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: -100px;
+        background: hsla(0, 0%, 100%, 0.8);
+        backdrop-filter: blur(30px);
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5">Nouvelle inscription</h2>
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+            <!-- First name input -->
+            <div class="form-outline mb-4">
+              <input type="text" name="firstName" id="firstName" class="form-control" ngModel />
+              <label class="form-label" for="firstName">Prénom</label>
+            </div>
+            <!-- Last name input -->
+            <div class="form-outline mb-4">
+              <input type="text" name="lastName" id="lastName" class="form-control" ngModel />
+              <label class="form-label" for="lastName">Nom</label>
+            </div>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="text" name="email" id="email" class="form-control" ngModel />
+              <label class="form-label" for="email">Mail</label>
+            </div>
+            <!-- Age input -->
+            <div class="form-outline mb-4">
+              <input type="number" name="age" id="age" class="form-control" ngModel />
+              <label class="form-label" for="age">Âge</label>
+            </div>
+            <!-- Height input -->
+            <div class="form-outline mb-4">
+              <input type="number" name="taille" id="taille" class="form-control" ngModel />
+              <label class="form-label" for="taille">Taille en cm</label>
+            </div>
+            <!-- Weight input -->
+            <div class="form-outline mb-4">
+              <input type="number" name="poids" id="poids" class="form-control" ngModel />
+              <label class="form-label" for="poids">Poids en kg</label>
+            </div>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">
+              Je m'inscris !
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
@@ -43,3 +110,4 @@
     </div>
   </div>
 </div>
+-->
