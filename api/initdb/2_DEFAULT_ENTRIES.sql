@@ -1,4 +1,3 @@
-INSERT INTO defaultdb.users (id, first_name, last_name, email) VALUES (2, 'Harry', 'Covert', 'harry@gmail.com');
 INSERT INTO defaultdb.programmes (id_programme, nom_programme) VALUES (1, '');
 INSERT INTO defaultdb.programmes (id_programme, nom_programme) VALUES (2, 'Juggernaut');
 INSERT INTO defaultdb.programmes (id_programme, nom_programme) VALUES (3, 'Momo');
@@ -56,3 +55,4 @@ INSERT INTO defaultdb.exercices (id_exercice, nom, serie, repetition, pourcentag
 INSERT INTO defaultdb.exercices (id_exercice, nom, serie, repetition, pourcentage_rm, id_seance) VALUES (12, 'Dips', 3, 8, 75, 5);
 INSERT INTO defaultdb.exercices (id_exercice, nom, serie, repetition, pourcentage_rm, id_seance) VALUES (13, 'Extension triceps', 3, 10, 70, 5);
 INSERT INTO defaultdb.users (id, first_name, last_name, email, id_programme) VALUES (1, 'Paul', 'Harrohide', 'paul@gmail.com', 1);
+INSERT INTO defaultdb.users (id, first_name, last_name, email) VALUES (2, 'Harry', 'Covert', 'harry@gmail.com',1);
