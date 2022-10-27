@@ -36,6 +36,10 @@ Les champs marqués de "@Column" correspondent aux colonnes de ta table.
 
     public Programme() {}
 
+    public Programme(Long idProgramme) {
+        this.idProgramme = idProgramme;
+    }
+
     public List<User> getUsers() {
         return users;
     }

@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit(ngForm: NgForm){
     const email = ngForm.form.value.email
-    console.log(email)
     this.userService.getUserByEmail(email).subscribe(res =>{
       if(res!=null){
         this.userService.user=res

@@ -1,0 +1,14 @@
+<div>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <select class="form-control" id="prog" name="prog" ngModel>
+            <ng-container *ngFor="let programme of programmes">
+                <ng-container *ngIf="programme.idProgramme!=1">
+                    <option value="{{programme.idProgramme}}" >
+                        {{programme.nom}}
+                    </option>
+                </ng-container>
+            </ng-container>
+        </select>
+        <button class="btn btn-primary" type="submit">Choisir</button>
+    </form>
+</div>
