@@ -35,13 +35,26 @@ export class SelectProgramsComponent implements OnInit {
             age: this.connectedUser.age,
             taille: this.connectedUser.taille,
             poids: this.connectedUser.poids,
-            programme: this.programmes[ngForm.form.value.prog]
+            programme: this.programmes[ngForm.form.value.prog-1]
         });
 
         // tslint:disable-next-line:no-shadowed-variable
         this.userService.addUser(user).subscribe(user => console.log(user));
 
         this.email = this.connectedUser.email;
+        this.userService.logout();
+        this.userService.getUserByEmail(this.email).subscribe(res =>{
+            if(res!=null){
+                this.userService.user=res
+            }
+        })
+        this.email = this.connectedUser.email;
+        this.userService.logout();
+        this.userService.getUserByEmail(this.email).subscribe(res =>{
+            if(res!=null){
+                this.userService.user=res
+            }
+        })
         this.userService.logout();
         this.userService.getUserByEmail(this.email).subscribe(res =>{
             if(res!=null){

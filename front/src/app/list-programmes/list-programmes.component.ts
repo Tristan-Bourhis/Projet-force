@@ -19,6 +19,7 @@ export class ListProgrammesComponent implements OnInit {
     seances: Seance[];
     exercices: Exercice[];
     connectedUser: User;
+    compteur: number;
 
     constructor(private pSer: ProgrammeService, private sSer: SeanceService, private uSer: UserService, private eSer: ExerciceService) { }
 
@@ -27,5 +28,12 @@ export class ListProgrammesComponent implements OnInit {
         this.sSer.getSeances().subscribe(seances => this.seances=seances);
         this.eSer.getExercices().subscribe(exercices => this.exercices=exercices);
         this.connectedUser = this.uSer.getUserConnected();
+        this.compteur=0;
+    }
+
+    increment(): number {
+        this.compteur = (this.compteur+1)%8;
+        console.log(this.compteur)
+        return this.compteur;
     }
 }
