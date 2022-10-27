@@ -3,6 +3,8 @@ import {NgForm} from '@angular/forms';
 import {UserService} from '../services/user.service';
 import { defaultsDeep } from 'lodash';
 import {Router} from '@angular/router';
+import {Programme} from '../models/programme.model';
+import {ProgrammeService} from '../services/programme.service';
 
 @Component({
   selector: 'app-create-account',
@@ -11,9 +13,12 @@ import {Router} from '@angular/router';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router) { }
+  programmes: Programme[];
+
+  constructor(private userService: UserService,private programmeService: ProgrammeService, private router: Router) { }
 
   ngOnInit() {
+    this.programmeService.getProgrammes().subscribe(programmes => this.programmes = programmes);
   }
 
   onSubmit(ngForm: NgForm) {
@@ -26,6 +31,7 @@ export class CreateAccountComponent implements OnInit {
       age: ngForm.form.value.age,
       taille: ngForm.form.value.taille,
       poids: ngForm.form.value.poids,
+      programme: this.programmes[0]
     });
 
     // tslint:disable-next-line:no-shadowed-variable
