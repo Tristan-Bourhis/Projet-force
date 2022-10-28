@@ -10,7 +10,6 @@ import {DotsComponent} from './dots/dots.component';
 import {RpeComponent} from './rpe/rpe.component';
 import {WarmupComponent} from './warmup/warmup.component';
 import {OutilsComponent} from './outils/outils.component';
-import {UpdateUserComponent} from './update-user/update-user.component';
 import {CreateAccountComponent} from './create-account/create-account.component';
 import {SelectProgramsComponent} from './select-programs/select-programs.component';
 
@@ -28,7 +27,6 @@ const routes: Routes = [
   { path: 'warmup', component: WarmupComponent },
   { path: 'outils', component: OutilsComponent },
   { path: 'create-account', component: CreateAccountComponent },
-  { path: 'update-user', component: UpdateUserComponent },
   { path: 'select-programs', component: SelectProgramsComponent },
 ]
 

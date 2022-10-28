@@ -9,7 +9,6 @@
       <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/rpe']">Calcul RPE</button>
       <button a *ngIf="!loggedIn()" class="btnNavBar" [routerLink]="['/warmup']">Recommandations échauffement</button>
       <button a *ngIf="!isAdmin()" class="btnNavBar" [routerLink]="['/list-users']" >Liste utilisateurs</button>
-      <button a *ngIf="!loggedIn()" (click)="logout()" class="btnNavBar" [routerLink]="['/login']" >Logout</button>
     </div>
   </div>
   <nav class="navbar topNavBarBottom">
@@ -17,6 +16,7 @@
       <button *ngIf="!loggedIn()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <button a *ngIf="!loggedIn()" (click)="logout()" class="btnNavBar" [routerLink]="['/login']" >Logout</button>
     </div>
   </nav>
   <!--End top Navigation bar -->

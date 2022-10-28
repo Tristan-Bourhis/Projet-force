@@ -45,19 +45,6 @@ export class ListProgrammesComponent implements OnInit {
     }
 
     changeProgramme() {
-        const user = defaultsDeep({
-            id: this.connectedUser.id,
-            firstName: this.connectedUser.firstName,
-            lastName: this.connectedUser.lastName,
-            email: this.connectedUser.email,
-            age: this.connectedUser.age,
-            taille: this.connectedUser.taille,
-            poids: this.connectedUser.poids,
-            programme: this.programmes[1]
-        });
-
-        // tslint:disable-next-line:no-shadowed-variable
-        this.userService.addUser(user).subscribe(user => console.log(user));
         this.router.navigateByUrl('/select-programs')
     }
 }

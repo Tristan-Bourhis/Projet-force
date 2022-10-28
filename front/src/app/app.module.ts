@@ -17,7 +17,6 @@ import { RpeComponent } from './rpe/rpe.component';
 import { WarmupComponent } from './warmup/warmup.component';
 import { OutilsComponent } from './outils/outils.component';
 import {CreateAccountComponent} from './create-account/create-account.component';
-import {UpdateUserComponent} from './update-user/update-user.component';
 import {SelectProgramsComponent} from './select-programs/select-programs.component';
 
 @NgModule({
@@ -34,7 +33,6 @@ import {SelectProgramsComponent} from './select-programs/select-programs.compone
     OutilsComponent,
     ListProgrammesComponent,
     CreateAccountComponent,
-    UpdateUserComponent,
     SelectProgramsComponent
   ],
   imports: [
