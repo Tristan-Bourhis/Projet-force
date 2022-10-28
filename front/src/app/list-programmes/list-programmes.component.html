@@ -1,12 +1,13 @@
-<div class="container">
+<div class="align">
     <div class="card mx-4 mx-md-5 shadow-5-strong" style="
         margin-top: -100px;
         background: hsla(0, 0%, 100%, 0.8);
         backdrop-filter: blur(30px);
         ">
         <div class="card-body py-5 px-md-5">
+            <button class="btn btn-primary btn-block mb-4" (click)="changeProgramme()">Changer de programme</button>
             <div class="row d-flex justify-content-center">
-                <h1 class="fw-bold mb-5" >Le programme de {{connectedUser.firstName}}</h1>
+                <h1 class="fw-bold mb-5" id="title">Le programme de {{connectedUser.firstName}}</h1>
                 <ng-container class="col-lg-8" *ngFor="let programme of programmes">
                     <ng-container *ngIf="programme.idProgramme==connectedUser.programme.idProgramme">
                     <h1 class="fw-bold mb-5" >Programme {{programme.nom}}</h1>

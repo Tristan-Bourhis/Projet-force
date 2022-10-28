@@ -6,7 +6,6 @@ import {ProgrammeService} from '../services/programme.service';
 import {NgForm} from '@angular/forms';
 import { defaultsDeep } from 'lodash';
 import {Router} from '@angular/router';
-import { Location } from '@angular/common';
 
 @Component({
     selector: 'app-select-programs',
@@ -19,11 +18,14 @@ export class SelectProgramsComponent implements OnInit {
     programmes: Programme[];
     email: string;
 
-    constructor( private userService: UserService, private progService: ProgrammeService, private router: Router, public loc: Location) { }
+    constructor(
+        private userService: UserService,
+        private programmeService: ProgrammeService,
+        private router: Router) { }
 
     ngOnInit(): void {
         this.connectedUser = this.userService.getUserConnected();
-        this.progService.getProgrammes().subscribe(programmes => this.programmes = programmes);
+        this.programmeService.getProgrammes().subscribe(programmes => this.programmes = programmes);
     }
 
     onSubmit(ngForm: NgForm) {
