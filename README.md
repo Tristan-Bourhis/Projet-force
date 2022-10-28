@@ -6,6 +6,7 @@ C'est une discipline sportive qui consiste à soulever le poids le plus lourd su
 * Squat
 * Bench
 * Deadlift
+
 Lors d'une compétition le vainqueur, de sa catégorie d'âge et de poids, est celui avec le plus gros total donc celui dont la somme des charges sur les 3 lifts est la plus grande. <br>
 
 Une des difficultés de ce sport est l'optimisation des entrainements qui nécessitent beaucoup de calculs afin de préparer des séances optimals. <br>
